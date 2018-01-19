@@ -1,4 +1,4 @@
-package hello;
+package weather;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -20,15 +20,15 @@ public class MainController {
         // @ResponseBody means the returned String is the response, not a view name
         // @RequestParam means it is a parameter from the GET or POST request
 
-        User n = new User();
-        n.setName(name);
-        n.setEmail(email);
+        data n = new data();
+        n.setTemperature(name);
+        n.setPressure(email);
         userRepository.save(n);
         return "Saved";
     }
 
     @GetMapping(path="/all")
-    public @ResponseBody Iterable<User> getAllUsers() {
+    public @ResponseBody Iterable<data> getAllUsers() {
         // This returns a JSON or XML with the users
         return userRepository.findAll();
     }
