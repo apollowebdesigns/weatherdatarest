@@ -15,14 +15,16 @@ public class MainController {
     private UserRepository userRepository;
 
     @GetMapping(path="/add") // Map ONLY GET Requests
-    public @ResponseBody String addNewUser (@RequestParam String name
-            , @RequestParam String email) {
+    public @ResponseBody String addNewUser (@RequestParam String date, @RequestParam String temperature
+            , @RequestParam String pressure, @RequestParam String humidity) {
         // @ResponseBody means the returned String is the response, not a view name
         // @RequestParam means it is a parameter from the GET or POST request
 
         data n = new data();
-        n.setTemperature(name);
-        n.setPressure(email);
+        n.setDate(date);
+        n.setTemperature(temperature);
+        n.setPressure(pressure);
+        n.setHumidity(humidity);
         userRepository.save(n);
         return "Saved";
     }
