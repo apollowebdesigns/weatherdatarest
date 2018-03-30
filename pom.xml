@@ -4,13 +4,13 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>org.springframework</groupId>
-    <artifactId>gs-mysql-data</artifactId>
+    <artifactId>gs-postgresql-data</artifactId>
     <version>0.1.0</version>
 
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>1.5.9.RELEASE</version>
+        <version>2.0.0.RELEASE</version>
     </parent>
 
     <dependencies>
@@ -22,19 +22,10 @@
         <!-- JPA Data (We are going to use Repositories, Entities, Hibernate, etc...) -->
 
         <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-orm</artifactId>
-            <version>3.2.5.RELEASE</version>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-jpa</artifactId>
         </dependency>
 
-        <!-- Use MySQL Connector-J -->
-
-        <dependency>
-            <groupId>mysql</groupId>
-            <artifactId>mysql-connector-java</artifactId>
-        </dependency>
-
-        <!-- https://mvnrepository.com/artifact/org.postgresql/postgresql -->
         <dependency>
             <groupId>org.postgresql</groupId>
             <artifactId>postgresql</artifactId>
@@ -46,18 +37,6 @@
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
-
-        <!--<dependency>-->
-            <!--<groupId>org.hibernate</groupId>-->
-            <!--<artifactId>hibernate-core</artifactId>-->
-            <!--<version>4.1.4.Final</version>-->
-        <!--</dependency>-->
-
-        <!--<dependency>-->
-            <!--<groupId>org.hibernate</groupId>-->
-            <!--<artifactId>hibernate-entitymanager</artifactId>-->
-            <!--<version>5.2.3.Final</version>-->
-        <!--</dependency>-->
     </dependencies>
 
     <properties>
