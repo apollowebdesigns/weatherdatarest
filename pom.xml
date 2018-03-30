@@ -22,8 +22,9 @@
         <!-- JPA Data (We are going to use Repositories, Entities, Hibernate, etc...) -->
 
         <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-data-jpa</artifactId>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-orm</artifactId>
+            <version>3.2.5.RELEASE</version>
         </dependency>
 
         <!-- Use MySQL Connector-J -->
