@@ -1,20 +1,21 @@
 package weather;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity // This tells Hibernate to make a table out of this class
+@Table(name = "data")
 public class data {
-    @Id
-    @GeneratedValue(strategy=GenerationType.AUTO)
+
+    @Column(name = "date")
     private String date;
 
+    @Column(name = "temperature")
     private String temperature;
 
+    @Column(name = "pressure")
     private String pressure;
 
+    @Column(name = "humidity")
     private String humidity;
 
     public String getDate() {
