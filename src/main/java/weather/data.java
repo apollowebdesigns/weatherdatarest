@@ -5,6 +5,10 @@ import javax.persistence.*;
 @Entity // This tells Hibernate to make a table out of this class
 @Table(name = "data")
 public class data {
+    private static final long serialVersionUID = -3009157732242241606L;
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private long id;
 
     @Column(name = "date")
     private String date;
